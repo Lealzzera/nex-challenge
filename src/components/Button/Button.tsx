@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Button = () => {
+type Props = {
+  textButton: string,
+  classeButton?: string,
+  estiloBotao: {}
+  buttonFunction: () => {}
+}
+
+const Button = ({ textButton, classeButton, buttonFunction, estiloBotao }: Props) => {
   return (
-    <div>Button</div>
+    <button className={classeButton} style={estiloBotao} onClick={buttonFunction}>{textButton}</button>
   )
 }
 
