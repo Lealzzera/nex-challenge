@@ -1,13 +1,7 @@
 .login-view {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column-reverse;
   font-family: 'Montserrat';
-}
-
-#background-logo {
-  background-image: url('../../assets/images/fundo-desktop.png');
-  background-repeat: no-repeat;
 }
 
 #login-content {
@@ -15,35 +9,40 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 530px;
-  height: 100vh;
+  min-width: 360px;
 }
 
 .grey-logo {
   margin-bottom: 30px;
+  display: none;
+}
+
+.title-h1 {
+  font-size: 24px;
+  margin-top: 29px;
 }
 
 span {
   color: #4C5980;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0px 50px;
   font-weight: 400;
-  padding: 0 100px;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .text-fields {
   display: flex;
   flex-direction: column;
+  margin-top: 38px;
 }
 
 .label-input {
   color: #323133;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
-  margin-left: 8px;
+  line-height: 21px;
+  margin-left: 6px;
 }
 
 .button-login-view {
@@ -52,18 +51,95 @@ span {
   justify-content: center;
 }
 
+.enter {
+  margin-bottom: 10px;
+}
+
 .forgot-password {
-  margin-top: 10px;
   color: #4C5980;
-  font-size: 12px
+  font-size: 10px
+}
+
+.sign-up {
+  margin-bottom: 56px;
 }
 
 #background-logo {
-  background-color: #323133;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 1390px;
-  height: 100vh;
+  min-width: 360px;
+}
+
+@media (min-width: 370px) {
+  #login-content {
+    height: 70vh;
+  }
+
+  #background-logo {
+    height: 30vh;
+  }
+}
+
+@media (min-width: 1920px) {
+  .login-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Montserrat';
+  }
+
+  #login-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 530px;
+    height: 100vh;
+  }
+
+  .grey-logo {
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  span {
+    color: #4C5980;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0 100px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .text-fields {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label-input {
+    color: #323133;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-left: 8px;
+  }
+
+  .button-login-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .forgot-password {
+    margin-top: 10px;
+    color: #4C5980;
+    font-size: 12px
+  }
+
+  #background-logo {
+    height: 100vh;
+  }
+
+  .background-image {
+    height: 980px;
+  }
 }
