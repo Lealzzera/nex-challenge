@@ -1,7 +1,7 @@
 .login-view {
   display: flex;
   flex-direction: column-reverse;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 #login-content {
@@ -18,7 +18,6 @@
 }
 
 .title-h1 {
-  font-size: 24px;
   margin-top: 29px;
 }
 
@@ -35,6 +34,13 @@ span {
   display: flex;
   flex-direction: column;
   margin-top: 38px;
+}
+
+.eye-password {
+  position: absolute;
+  width: 22px;
+  margin-left: 214px;
+  margin-top: 115px;
 }
 
 .label-input {
@@ -78,65 +84,79 @@ span {
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1292px) {
   .login-view {
-    display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'Montserrat';
   }
 
   #login-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     width: 530px;
     height: 100vh;
   }
 
   .grey-logo {
-    margin-bottom: 30px;
     display: block;
   }
 
+  .title-h1 {
+    margin-top: 20px;
+  }
+
   span {
-    color: #4C5980;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    padding: 0 100px;
-    text-align: center;
-    margin-bottom: 30px;
+    padding: 0 45px;
   }
 
   .text-fields {
-    display: flex;
-    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .eye-password {
+    margin-left: 274px;
+    margin-top: 122px;
   }
 
   .label-input {
-    color: #323133;
-    font-weight: 400;
-    font-size: 14px;
     line-height: 24px;
     margin-left: 8px;
   }
 
-  .button-login-view {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .sign-up {
+    margin-bottom: 0px;
+  }
+
+  .enter {
+    margin-top: 15px;
   }
 
   .forgot-password {
-    margin-top: 10px;
-    color: #4C5980;
     font-size: 12px
   }
 
   #background-logo {
     height: 100vh;
+  }
+
+  .background-image {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1920px) {
+  .grey-logo {
+    margin-bottom: 30px;
+  }
+
+  span {
+    padding: 0 100px;
+    margin-bottom: 30px;
+  }
+
+  .forgot-password {
+    margin-top: 10px;
   }
 
   .background-image {
