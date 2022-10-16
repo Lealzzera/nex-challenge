@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nexphoto, GreyLogo, ArrowRight } from '../../assets'
+import { GreyLogo, ArrowRight, EyeShowPassword } from '../../assets'
 import { Button } from '../../components/Button/Button'
 import { InputText } from '../../components/InputText/InputText'
 import { TitleText } from '../../components/TitleText/TitleText'
@@ -15,7 +15,7 @@ const styles = {
   purple: '#4C5980',
   yellow: '#FFD175',
   black: '#323133',
-  bold: '800',
+  bold: 'bold',
 }
 
 const LoginView = () => {
@@ -35,7 +35,7 @@ const LoginView = () => {
           <label className='label-input'>Login</label>
           <InputText height='40px' width={window.window.innerWidth < 1000 ? styles.sizeInputMobile : styles.sizeInputDesktop} fontSizeInput={styles.fontSizeNormal} inputRadius='50px' paddingInput='20px' type='text' />
           <label className='label-input' style={{ marginTop: '23px' }}>Senha</label>
-          <InputText height='40px' width={window.window.innerWidth < 1000 ? styles.sizeInputMobile : styles.sizeInputDesktop} fontSizeInput={styles.fontSizeNormal} inputRadius='50px' paddingInput='20px' type='password' />
+          <InputText height='40px' width={window.window.innerWidth < 1000 ? styles.sizeInputMobile : styles.sizeInputDesktop} fontSizeInput={styles.fontSizeNormal} inputRadius='50px' paddingInput='20px' type='password' /> <button className='eye-password'><EyeShowPassword /></button>
         </div>
         <Button className='button-login-view enter' bgColor={styles.yellow} btnHeight='40px' btnWidth={window.window.innerWidth < 1000 ? styles.sizeInputMobile : styles.sizeInputDesktop} textColor={styles.black} fontSize={styles.fontSizeNormal} btnRadius='50px' btnWeight='700' style={{ marginTop: '35px' }}>ENTRAR <ArrowRight style={{ marginBottom: '2px', marginLeft: '8px' }} /></Button>
         <a href="google.com" className='forgot-password'>Esqueci minha senha</a>

@@ -1,5 +1,6 @@
-import { ReactComponent as Nexphoto } from './icon-nexphoto-desktop.svg';
 import { ReactComponent as GreyLogo } from './icon-grey-logo.svg';
 import { ReactComponent as ArrowRight } from './icon-arrow.svg';
+import { ReactComponent as EyeShowPassword } from './icon-eye.svg';
 
-export { Nexphoto, GreyLogo, ArrowRight };
+
+export { GreyLogo, ArrowRight, EyeShowPassword };
