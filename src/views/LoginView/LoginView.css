@@ -1,0 +1,69 @@
+.login-view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Montserrat';
+}
+
+#background-logo {
+  background-image: url('../../assets/images/fundo-desktop.png');
+  background-repeat: no-repeat;
+}
+
+#login-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 530px;
+  height: 100vh;
+}
+
+.grey-logo {
+  margin-bottom: 30px;
+}
+
+span {
+  color: #4C5980;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 0 100px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.text-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-input {
+  color: #323133;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 8px;
+}
+
+.button-login-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  color: #4C5980;
+  font-size: 12px
+}
+
+#background-logo {
+  background-color: #323133;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 1390px;
+  height: 100vh;
+}
