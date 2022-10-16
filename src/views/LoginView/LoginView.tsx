@@ -1,31 +1,45 @@
 import React from 'react'
-import { Nexphoto } from '../../assets'
-import Button from '../../components/Button/Button'
+import { Nexphoto, GreyLogo, ArrowRight } from '../../assets'
+import { Button } from '../../components/Button/Button'
+import { InputText } from '../../components/InputText/InputText'
+import { TitleText } from '../../components/TitleText/TitleText'
+import './LoginView.css'
+
+const styles = {
+  fontSizeBig: '36px',
+  fontSizeNormal: '16px',
+  purple: '#4C5980',
+  yellow: '#FFD175',
+  black: '#323133',
+  bold: '800',
+}
 
 const LoginView = () => {
 
-  const handleButton = () => {
-    console.log('hello world')
-    return 'oi'
-  }
-
   return (
-    <section className='flex items-center flex-col'>
-      <div id='background-logo' className='bg-black w-screen flex justify-center'>
-        <Nexphoto style={{ width: '92px' }} />
-      </div>
-      <div id='login-content' className='flex items-center flex-col justify-center' style={{ backgroundColor: '#D6D6D6' }}>
-        <div id='text-content' style={{ backgroundColor: '#D6D6D6' }} className='flex justify-center flex-col items-center mt-7'>
-          <h1 style={{ fontFamily: 'Montserrat', fontWeight: 'bold', color: '#4C5980', fontSize: '24px' }}>Entrar</h1>
-          <span className='text-center' style={{ fontFamily: 'Montserrat', color: '#4C5980', fontSize: '12px' }}>Utilize seu e-mail e senha cadastrados para acessar a plataforma.</span>
+    <div className='login-view'>
+      <div id='login-content' style={{ backgroundColor: '#D6D6D6' }}>
+        <GreyLogo className='grey-logo' />
+        <TitleText
+          fontSize={styles.fontSizeBig}
+          fontColor={styles.purple}
+          fontWeight={styles.bold}
+          lineHeight='38px'>ENTRAR</TitleText>
+        <span>Utilize seu e-mail e senha cadastrados para acessar a plataforma.</span>
+        <div className='text-fields'>
+          <label className='label-input'>Login</label>
+          <InputText height='40px' width='309px' fontSizeInput={styles.fontSizeNormal} inputRadius='50px' paddingInput='20px' type='text' />
+          <label className='label-input' style={{ marginTop: '23px' }}>Senha</label>
+          <InputText height='40px' width='309px' fontSizeInput={styles.fontSizeNormal} inputRadius='50px' paddingInput='20px' type='password' />
         </div>
-        <div id='inputs-and-buttons-content' className='flex justify-center flex-col items-center'>
-          <Button classeButton='rounded-2xl' estiloBotao={{ backgroundColor: '#FFD175', height: '33px', width: '245px', fontFamily: 'Montserrat', fontWeight: 'bold', color: '#323133' }} textButton='ENTRAR >' buttonFunction={handleButton} />
-          <a href="https://www.google.com" style={{ fontFamily: 'Montserrat', color: '#4C5980', fontSize: '10px', lineHeight: '12.19px' }}>Esqueci minha senha</a>
-          <Button classeButton='rounded-2xl' estiloBotao={{ height: '33px', width: '245px', fontFamily: 'Montserrat', fontWeight: 'bold', color: '#63719D', border: 'solid #63719D' }} textButton='ENTRAR >' buttonFunction={handleButton} />
-        </div>
+        <Button className='button-login-view' bgColor={styles.yellow} btnHeight='40px' btnWidth='309px' textColor={styles.black} fontSize={styles.fontSizeNormal} btnRadius='50px' btnWeight='700' style={{ marginTop: '35px' }}>ENTRAR <ArrowRight style={{ marginBottom: '2px', marginLeft: '8px' }} /></Button>
+        <a href="google.com" className='forgot-password'>Esqueci minha senha</a>
+        <Button className='button-login-view' btnHeight='40px' btnWidth='309px' textColor={styles.purple} fontSize={styles.fontSizeNormal} btnRadius='50px' btnWeight='700' btnBorder='solid 2px' borderColor={styles.purple} style={{ marginTop: '20px' }}>CADASTRE-SE</Button>
       </div>
-    </section>
+      <div id='background-logo'>
+        <Nexphoto />
+      </div>
+    </div>
   )
 }
 
